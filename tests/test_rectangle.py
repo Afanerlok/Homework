@@ -1,3 +1,4 @@
+import pytest
 from Homework.src.rectangle import Rectangle
 
 def test_rectangle_integer():

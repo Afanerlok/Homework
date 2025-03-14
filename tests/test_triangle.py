@@ -12,3 +12,15 @@ def test_triangle_perimeter():
 def test_invalid_triangle():
     with pytest.raises(ValueError):
         Triangle(1, 2, 3)
+
+@pytest.mark.parametrize(
+    "a, b, c",
+    [
+        (1, 2, 3),
+        (0, 0, 0),
+        (-1, -1, 2),
+    ],
+)
+def test_invalid_triangle(a, b, c):
+    with pytest.raises(ValueError, match="Треугольник с такими сторонами не может существовать."):
+        Triangle(a, b, c)

@@ -1,3 +1,4 @@
+import pytest
 from Homework.src.square import Square
 
 def test_square_area():
